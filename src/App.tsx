@@ -246,7 +246,13 @@ function App() {
               key={track.id}
               title={`Track ${track.id}: ${track.shortTitle}`}
             >
-              <span>{track.id}</span>
+              <span className="track-dot__letter">{track.id}</span>
+              {sidebarOpen && (
+                <span className="track-dot__copy">
+                  <strong>{track.shortTitle}</strong>
+                  <small>{track.status}</small>
+                </span>
+              )}
             </NavLink>
           ))}
         </div>
