@@ -603,7 +603,10 @@ p {
 
 .progress-dial {
   display: grid;
-  place-items: center;
+  grid-auto-rows: max-content;
+  align-content: center;
+  justify-items: center;
+  row-gap: 3px;
   width: 62px;
   height: 62px;
   flex: 0 0 62px;
@@ -619,6 +622,7 @@ p {
   width: 168px;
   height: 168px;
   flex-basis: 168px;
+  row-gap: 12px;
   background:
     radial-gradient(circle, #fffdf7 55%, transparent 56%),
     conic-gradient(var(--track-accent, var(--coral)) var(--progress), #ded6c7 0);
@@ -631,7 +635,8 @@ p {
 }
 
 .progress-dial--large strong {
-  font-size: 2.4rem;
+  font-size: 2.45rem;
+  line-height: 0.9;
 }
 
 .progress-dial span {
@@ -640,7 +645,14 @@ p {
   color: var(--muted);
   font-size: 0.66rem;
   font-weight: 800;
+  line-height: 1.2;
   text-transform: uppercase;
+}
+
+.progress-dial--large span {
+  max-width: 74px;
+  font-size: 0.7rem;
+  line-height: 1.18;
 }
 
 .segmented {
