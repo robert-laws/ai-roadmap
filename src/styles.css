@@ -16,6 +16,11 @@
   --dark: #172126;
   --dark-2: #223139;
   --line: #d8d1c1;
+  --sidebar-bg: #e2eadf;
+  --sidebar-bg-2: #d5e1d6;
+  --sidebar-ink: #24352f;
+  --sidebar-muted: #64736b;
+  --sidebar-line: #c3d0c4;
   --coral: #d76f55;
   --cyan: #65b8c6;
   --lime: #9fbd63;
@@ -112,11 +117,12 @@ button:disabled {
   flex-direction: column;
   gap: 18px;
   padding: 18px 14px;
-  color: #f8f4e9;
+  color: var(--sidebar-ink);
   background:
-    linear-gradient(180deg, rgba(215, 111, 85, 0.16), transparent 34%),
-    #172126;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
+    linear-gradient(180deg, rgba(215, 111, 85, 0.16), rgba(255, 253, 247, 0) 34%),
+    linear-gradient(155deg, var(--sidebar-bg) 0%, var(--sidebar-bg-2) 100%);
+  border-right: 1px solid var(--sidebar-line);
+  box-shadow: 12px 0 40px rgba(52, 58, 46, 0.08);
   transition: width 180ms ease;
   z-index: 10;
 }
@@ -156,12 +162,18 @@ button:disabled {
 }
 
 .brand span {
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--sidebar-muted);
   font-size: 0.78rem;
 }
 
 .sidebar-toggle {
   align-self: flex-end;
+}
+
+.sidebar .icon-button {
+  background: rgba(255, 253, 247, 0.55);
+  border-color: rgba(113, 128, 114, 0.26);
+  color: var(--sidebar-ink);
 }
 
 .sidebar--closed .sidebar-toggle {
@@ -181,13 +193,14 @@ button:disabled {
   min-height: 40px;
   padding: 10px;
   border-radius: var(--radius);
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--sidebar-muted);
 }
 
 .nav-item:hover,
 .nav-item.active {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
+  background: rgba(255, 253, 247, 0.64);
+  color: var(--sidebar-ink);
+  box-shadow: inset 0 0 0 1px rgba(113, 128, 114, 0.18);
 }
 
 .track-rail {
@@ -201,8 +214,8 @@ button:disabled {
   justify-content: flex-start;
   min-height: 56px;
   padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 253, 247, 0.05);
+  border: 1px solid rgba(113, 128, 114, 0.24);
+  background: rgba(255, 253, 247, 0.48);
   overflow: hidden;
 }
 
@@ -238,7 +251,7 @@ button:disabled {
   color: #11181b;
   font-size: 0.84rem;
   font-weight: 900;
-  box-shadow: 0 0 0 2px rgba(255, 253, 247, 0.12);
+  box-shadow: 0 0 0 2px rgba(33, 45, 38, 0.08);
 }
 
 .track-dot__copy {
@@ -256,13 +269,13 @@ button:disabled {
 }
 
 .track-dot__copy strong {
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--sidebar-ink);
   font-size: 0.88rem;
   line-height: 1.1;
 }
 
 .track-dot__copy small {
-  color: rgba(255, 255, 255, 0.58);
+  color: var(--sidebar-muted);
   font-size: 0.72rem;
   font-weight: 800;
 }
@@ -270,12 +283,12 @@ button:disabled {
 .track-dot:hover,
 .track-dot.active {
   border-color: var(--track-accent);
-  background: rgba(255, 253, 247, 0.1);
+  background: rgba(255, 253, 247, 0.78);
 }
 
 .track-dot.active .track-dot__letter {
   box-shadow:
-    0 0 0 2px rgba(255, 253, 247, 0.24),
+    0 0 0 2px rgba(255, 253, 247, 0.8),
     0 0 0 5px color-mix(in srgb, var(--track-accent) 34%, transparent);
 }
 
