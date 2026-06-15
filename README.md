@@ -1,6 +1,10 @@
 # AI Roadmap Studio
 
+[![Deploy to GitHub Pages](https://github.com/robert-laws/ai-roadmap/actions/workflows/deploy.yml/badge.svg)](https://github.com/robert-laws/ai-roadmap/actions/workflows/deploy.yml)
+
 A static GitHub Pages site for tracking AI learning progress, lesson work, and proof-of-skill examples.
+
+Live site: [https://robert-laws.github.io/ai-roadmap/](https://robert-laws.github.io/ai-roadmap/)
 
 ## Local Development
 
@@ -19,11 +23,7 @@ npm run build
 
 The site is configured for GitHub Pages at `/ai-roadmap/`. Push `main` to a GitHub repository named `ai-roadmap`, then enable Pages with GitHub Actions as the source.
 
-Expected URL:
-
-```text
-https://<github-user>.github.io/ai-roadmap/
-```
+Live URL: [https://robert-laws.github.io/ai-roadmap/](https://robert-laws.github.io/ai-roadmap/)
 
 ## Data Model
 
